@@ -21,7 +21,9 @@ LIBS_EDGE_OPT=-lcrypto
 #ifeq ($(OPENSSL_CFLAGS), 0)
 #	CFLAGS+=$(shell pkg-config --cflags-only-I openssl)
 #endif
+CFLAGS+=-static
 CFLAGS+="-I/home/starx/openssl-1.1.1d/include"
+#
 CFLAGS+=$(DEBUG) $(OPTIMIZATION) $(WARN) $(OPTIONS) $(PLATOPTS)
 
 INSTALL=install
